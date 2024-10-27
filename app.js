@@ -50,9 +50,7 @@ app.get('/year&pages/cervantes', (req, res) => {
 //country/count/spain para obtener EL NÚMERO DE LIBROS de España
 app.get('/country/count/spain', (req, res) => {
     const spain = books.filter(book => book.country === "Spain")
-    if (spain) {
-        return res.send(spain)
-    }
+    return res.send(spain)
 })
 
 //country/at-least/germany para obtener VERDADERO O FALSO dependiendo de si hay o no un libro de Alemania
